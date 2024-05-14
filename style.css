@@ -1,0 +1,250 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  /*1rem = 10px*/
+
+}
+:root{
+ --primaryfont: sans-serif;
+ --secondaryfont: "Dancing Script", cursive;
+ --defaultcolor: black;
+ scroll-behavior: smooth;
+}
+body{
+  font-size: 1.6rem;
+  font-family: var(--primaryfont);
+}
+.header{
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid red;
+  z-index: 999;
+}
+@media screen and (max-width:37.5) {
+  .header{
+    flex-direction: row;
+  }
+}
+.headerlogo{
+  text-transform: capitalize;
+}
+.header a{
+  text-decoration: none;
+  color: black;
+}
+.header-navlist{
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+.header-nav-link{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--defaultcolor);
+}
+
+.hero{
+  height: 70vh;
+  background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(./asset/model1.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-subtitle,
+.hero-maintitle{
+  color: white;
+}
+.hero-textbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-subtitle{
+  font-family: var(--secondaryfont);
+  font-size: 6rem;
+}
+.hero-maintitle{
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hero-cta{
+  display: inline-block;
+  background-color: red;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+}
+@media screen and (max-width:25em) {
+  .hero-subtitle,
+  .hero-maintitle{
+    font-size: 5rem;
+  }
+}
+
+.about{
+  padding: 6rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  gap: 3rem;
+
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.title .subtitle{
+  text-transform: capitalize;
+  color: red;
+  font-size: 4rem;
+  font-style: italic;
+  font-family: var(--secondaryfont);
+  text-align: center;
+}
+.maintitle{
+  font-size: 5rem;
+  text-transform: capitalize;
+
+}
+.abouttextbox p{
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.abouttextbox a{
+  /*This will center it*/
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  margin: 0 auto;
+  width: max-content;
+  display: block;
+}
+
+.aboutimage{
+  width: 25rem;
+  border-radius: 15px;
+  transition: 2s ease;
+}
+.aboutimage:hover{
+  transform: scale(1.02);
+}
+
+@media screen and (maxwidth:62.5em) {
+  .about{
+    padding: 6rem 8rem;
+  }
+}
+@media screen and (maxwidth:32em) {
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.banner2{
+  height: 50vh;
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(./asset/model1.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.banner2 div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner2 div .banner2subtitle, .menusubtitle{
+color: red;
+font-family: cursive;
+font-size: 10rem;
+text-align: center;
+}
+
+.banner2 div .maintitle, .menuMaintitile{
+font-style: italic;
+color: rgb(88, 87, 87);
+font-size: 6rem 2rem;
+text-align: center;
+}
+.menu{
+  padding: 6rem 2rem;
+}
+.menuitem{
+  width: 40rem;
+ 
+}
+
+.menuitem .image{
+  height: 20rem;
+  width: 100%;
+}
+
+.menuitem .image img{
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  display: block;
+  /*object-fit: cover;*/
+}
+.menuitem h2{
+  font-size: 1rem 0;
+  font-weight: 200 ;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+.menuitem p{
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 1.7;
+  columns: #777;
+}
+.menuitem a{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #888;
+}
+
+.menucontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+footer{
+  background-color: #999;
+}
+footer p{
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.7;
+}
